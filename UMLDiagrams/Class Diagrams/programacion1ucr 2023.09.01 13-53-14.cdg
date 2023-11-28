@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="programacion1ucr">
+  <ClassDiagramComponents>
+    <Class name="Contact" package="clases" visibility="public" xPosition="39.0" yPosition="60.0">
+      <Fields>
+        <Field name="phone" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="cellPhone" type="String" visibility="private"/>
+        <Field name="webPage" type="String" visibility="private"/>
+        <Field name="socialMedia" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="cellPhone"/>
+          <Argument type="String" name="webPage"/>
+          <Argument type="String[]" name="socialMedia"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getCellPhone" returnType="String" visibility="public"/>
+        <Method name="setCellPhone" returnType="void" visibility="public">
+          <Argument type="String" name="cellPhone"/>
+        </Method>
+        <Method name="getWebPage" returnType="String" visibility="public"/>
+        <Method name="setWebPage" returnType="void" visibility="public">
+          <Argument type="String" name="webPage"/>
+        </Method>
+        <Method name="getSocialMedia" returnType="String[]" visibility="public"/>
+        <Method name="setSocialMedia" returnType="void" visibility="public">
+          <Argument type="String[]" name="socialMedia"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Costumer" package="clases" visibility="public" xPosition="756.0" yPosition="706.0">
+      <Fields>
+        <Field name="discount" type="double" visibility="private"/>
+        <Field name="idCostumer" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="discount"/>
+          <Argument type="int" name="idCostumer"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="double" name="discount"/>
+          <Argument type="int" name="idCostumer"/>
+          <Argument type="char" name="gender"/>
+          <Argument type="Date" name="birthday"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="Contact" name="contac"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDiscount" returnType="double" visibility="public"/>
+        <Method name="setDiscount" returnType="void" visibility="public">
+          <Argument type="double" name="discount"/>
+        </Method>
+        <Method name="getIdCostumer" returnType="int" visibility="public"/>
+        <Method name="setIdCostumer" returnType="void" visibility="public">
+          <Argument type="int" name="idCostumer"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Invoice" package="clases" visibility="public" xPosition="587.0" yPosition="838.0">
+      <Fields>
+        <Field name="code" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Person" package="clases" visibility="public" xPosition="862.0" yPosition="96.0">
+      <Fields>
+        <Field name="gender" type="char" visibility="private"/>
+        <Field name="birthday" type="Date" visibility="private"/>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="contac" type="Contact" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="char" name="gender"/>
+          <Argument type="Date" name="birthday"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="Contact" name="contac"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getGender" returnType="char" visibility="public"/>
+        <Method name="setGender" returnType="void" visibility="public">
+          <Argument type="char" name="gender"/>
+        </Method>
+        <Method name="getBirthday" returnType="Date" visibility="public"/>
+        <Method name="setBirthday" returnType="void" visibility="public">
+          <Argument type="Date" name="birthday"/>
+        </Method>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getContac" returnType="Contact" visibility="public"/>
+        <Method name="setContac" returnType="void" visibility="public">
+          <Argument type="Contact" name="contac"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Product" package="clases" visibility="public" xPosition="1635.0" yPosition="301.0">
+      <Fields>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="quantily" type="int" visibility="private"/>
+        <Field name="offter" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Provider" package="clases" visibility="public" xPosition="39.0" yPosition="1062.0">
+      <Fields>
+        <Field name="status" type="boolean" visibility="private"/>
+        <Field name="typeProvider" type="boolean" visibility="private"/>
+        <Field name="contac" type="Contact" visibility="private"/>
+        <Field name="invoice" type="Invoice[]" visibility="private"/>
+        <Field name="dateClousure" type="String" visibility="private"/>
+        <Field name="dateDelivery" type="String" visibility="private"/>
+        <Field name="idProvider" type="String" visibility="private"/>
+        <Field name="nameProvider" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="status"/>
+          <Argument type="boolean" name="typeProvider"/>
+          <Argument type="Contact" name="contac"/>
+          <Argument type="Invoice[]" name="invoice"/>
+          <Argument type="String" name="dateClousure"/>
+          <Argument type="String" name="dateDelivery"/>
+          <Argument type="String" name="idProvider"/>
+          <Argument type="String" name="nameProvider"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isStatus" returnType="boolean" visibility="public"/>
+        <Method name="setStatus" returnType="void" visibility="public">
+          <Argument type="boolean" name="status"/>
+        </Method>
+        <Method name="isTypeProvider" returnType="boolean" visibility="public"/>
+        <Method name="setTypeProvider" returnType="void" visibility="public">
+          <Argument type="boolean" name="typeProvider"/>
+        </Method>
+        <Method name="getContac" returnType="Contact" visibility="public"/>
+        <Method name="setContac" returnType="void" visibility="public">
+          <Argument type="Contact" name="contac"/>
+        </Method>
+        <Method name="getInvoice" returnType="Invoice[]" visibility="public"/>
+        <Method name="setInvoice" returnType="void" visibility="public">
+          <Argument type="Invoice[]" name="invoice"/>
+        </Method>
+        <Method name="getDateClousure" returnType="String" visibility="public"/>
+        <Method name="setDateClousure" returnType="void" visibility="public">
+          <Argument type="String" name="dateClousure"/>
+        </Method>
+        <Method name="getDateDelivery" returnType="String" visibility="public"/>
+        <Method name="setDateDelivery" returnType="void" visibility="public">
+          <Argument type="String" name="dateDelivery"/>
+        </Method>
+        <Method name="getIdProvider" returnType="String" visibility="public"/>
+        <Method name="setIdProvider" returnType="void" visibility="public">
+          <Argument type="String" name="idProvider"/>
+        </Method>
+        <Method name="getNameProvider" returnType="String" visibility="public"/>
+        <Method name="setNameProvider" returnType="void" visibility="public">
+          <Argument type="String" name="nameProvider"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UserSystem" package="clases" visibility="public" xPosition="1404.0" yPosition="706.0">
+      <Fields>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="nickName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="nickName"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="nickName"/>
+          <Argument type="char" name="gender"/>
+          <Argument type="Date" name="birthday"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="Contact" name="contac"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getNickName" returnType="String" visibility="public"/>
+        <Method name="setNickName" returnType="void" visibility="public">
+          <Argument type="String" name="nickName"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="POs" package="pos" visibility="public" xPosition="1600.0" yPosition="199.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="contac" source="clases.Provider" target="clases.Contact" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="contac" source="clases.Person" target="clases.Contact" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="clases.UserSystem" target="clases.Person"/>
+    <UseRelation source="clases.Person" target="clases.Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="clases.Provider" target="clases.Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="clases.Costumer" target="clases.Person"/>
+    <UseRelation source="clases.Provider" target="clases.Invoice" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

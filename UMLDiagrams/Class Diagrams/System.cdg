@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="System">
+  <ClassDiagramComponents>
+    <Class name="Vehiculos" package="" visibility="public" xPosition="171.0" yPosition="25.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="price" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="consultVehicleDetails" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Electricos" package="" visibility="public" xPosition="337.0" yPosition="343.0">
+      <Fields>
+        <Field name="fastCharge" type="boolean" visibility="private"/>
+        <Field name="autonomy" type="double" visibility="private"/>
+        <Field name="batteryCharge" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="batteryCharge" returnType="double" visibility="public"/>
+        <Method name="fastCharge" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Combustion" package="" visibility="public" xPosition="43.0" yPosition="327.0">
+      <Fields>
+        <Field name="fuelConsumption" type="double" visibility="private"/>
+        <Field name="tankCapacity" type="double" visibility="private"/>
+        <Field name="gasEmission" type="boolean" visibility="private"/>
+        <Field name="enginePower" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="consumptionKilometer" returnType="void" visibility="public"/>
+        <Method name="tankCapacity" returnType="double" visibility="public"/>
+        <Method name="enginePower" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mantenimiento" package="" visibility="public" xPosition="190.0" yPosition="650.0">
+      <Fields>
+        <Field name="pay" type="int" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="pay" returnType="int" visibility="public"/>
+        <Method name="date" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Sistemas" package="" visibility="public" xPosition="755.0" yPosition="-5.0">
+      <Fields>
+        <Field name="listVehicles" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="registerVehicles" returnType="void" visibility="public"/>
+        <Method name="consultVehicleDetails" returnType="void" visibility="public"/>
+        <Method name="OperationCost" returnType="void" visibility="public"/>
+        <Method name="maintenance" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="" visibility="public" xPosition="600.0" yPosition="272.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="paswork" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="login" returnType="void" visibility="public"/>
+        <Method name="registerVehicle" returnType="void" visibility="public"/>
+        <Method name="consultVehicleDetails" returnType="void" visibility="public"/>
+        <Method name="OperationCost" returnType="void" visibility="public"/>
+        <Method name="maintenance" returnType="void" visibility="public"/>
+        <Method name="singOff" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="976.0" yPosition="333.0">
+      <Fields>
+        <Field name="phone" type="int" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="lastName" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Persona" returnType="void" visibility="public">
+          <Argument type="int" name="phone"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="lastName"/>
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="asociacion" source="Usuario" target="Sistemas" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="mantenimiento" source="Mantenimiento" target="Vehiculos" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Persona" target="Usuario"/>
+    <IsRelation name="is" source="Combustion" target="Vehiculos"/>
+    <IsRelation name="is" source="Electricos" target="Vehiculos"/>
+    <HasRelation name="asociacion" source="Sistemas" target="Vehiculos" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

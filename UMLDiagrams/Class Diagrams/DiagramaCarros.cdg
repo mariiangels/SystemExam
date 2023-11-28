@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DiagramaCarros">
+  <ClassDiagramComponents>
+    <Class name="Car" package="" visibility="public" isAbstract="true" xPosition="71.0" yPosition="41.0">
+      <Fields>
+        <Field name="type" type="CarType" visibility="private"/>
+        <Field name="carlD" type="String" visibility="private"/>
+        <Field name="maxSpeed" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="protected">
+          <Argument type="CarType" name="type"/>
+          <Argument type="String" name="carID"/>
+          <Argument type="int" name="maxSpeed"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getType" returnType="CarType" visibility="public"/>
+        <Method name="getCarID" returnType="String" visibility="public"/>
+        <Method name="getMaxSpeed" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Vehicle" package="" visibility="public" xPosition="515.0" yPosition="9.0">
+      <Methods>
+        <Method name="increaseSpeed" returnType="int" visibility="public">
+          <Argument type="int" name="dV"/>
+        </Method>
+        <Method name="decreaseSpeed" returnType="int" visibility="public">
+          <Argument type="int" name="dV"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Enum name="CarType" package="" visibility="public" xPosition="524.0" yPosition="122.0">
+      <Literals>
+        <Literal name="COMPACT"/>
+        <Literal name="STANDARD"/>
+        <Literal name="LUXURIOUS"/>
+        <Literal name="SPORT"/>
+        <Literal name="SUV"/>
+      </Literals>
+    </Enum>
+    <Class name="Ford" package="" visibility="public" xPosition="25.0" yPosition="373.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="CarType" name="type"/>
+          <Argument type="String" name="carID"/>
+          <Argument type="int" name="maxSpeed"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="BMW" package="" visibility="public" xPosition="364.0" yPosition="373.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="CarType" name="type"/>
+          <Argument type="String" name="carID"/>
+          <Argument type="int" name="maxSpeed"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="type" source="Car" target="CarType" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Ford" target="Car"/>
+    <IsRelation name="is" source="BMW" target="Car"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Car" target="Vehicle"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

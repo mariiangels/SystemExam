@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="post">
+  <ClassDiagramComponents>
+    <Class name="Winner" package="" visibility="public" xPosition="174.0" yPosition="210.0">
+      <Fields>
+        <Field name="winner" type="boolean" visibility="private"/>
+        <Field name="x" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="winner" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Player" package="" visibility="public" xPosition="607.0" yPosition="261.0">
+      <Fields>
+        <Field name="turnPlayer" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="play" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TicTacToe" package="" visibility="public" xPosition="369.0" yPosition="42.0">
+      <Fields>
+        <Field name="symbol" type="char[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Board" package="" visibility="public" xPosition="369.0" yPosition="421.0">
+      <Fields>
+        <Field name="board" type="char[][]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initializeBoard" returnType="void" visibility="public"/>
+        <Method name="showScreen" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="has" source="TicTacToe" target="Board" type="Composition" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="has" source="Player" target="Winner" type="Composition" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="has" source="TicTacToe" target="Winner" type="Composition" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="has" source="TicTacToe" target="Player" type="Composition" sourceCardinality="0..1" targetCardinality="0..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
